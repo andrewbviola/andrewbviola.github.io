@@ -70,13 +70,183 @@
           <div class="u-tab-content">
             <div class="u-container-style u-tab-active u-tab-pane u-tab-pane-1" id="link-tab-d7e7" role="tabpanel" aria-labelledby="tab-d7e7">
               <div class="u-container-layout u-container-layout-1">
-                <h2 class="u-align-center u-text u-text-default u-text-1">CNC Sand Coffee Table - Summer 2022</h2>
-                <p class="u-align-center u-text u-text-2">Inspired by the <a href="https://sisyphus-industries.com/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">Sisyphus Sand Table</a> and the <a href="https://docs.v1engineering.com/zenxy/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" target="_blank">ZenXY</a>, this sand table was created using an old glass table top and spare wood.&nbsp; 3D printing software, Klipper, was flashed to an Arduino Uno, and is able to be controlled through a Raspberry Pi.&nbsp; Images in the sand can be generated through <a href="https://sandify.org" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">sandify.org</a>, which users can hand create various line works, similar to vector drawing programs.&nbsp; To control the LEDs in the table, WLED is used for network control and Home Assistant integration.<br>
+                <h2 class="u-align-center u-text u-text-default u-text-1">Wii Tanks Reinforment Learning Agent - Summer 2023</h2>
+                <p class="u-align-center u-text u-text-2"><b>
+                    <span style="font-weight: 400;">Tanks is a minigame featured in Nintendo’s Wii Play video game. Using Dolphin (a Wii and Gamecube emulator for computers), the game can be played on a computer along with emulated controls. With this in mind, the goal of this project was to create a bot in Python that would be able to complete the various levels of the game.</span>
+                    <br>
+                    <span style="font-weight: 400;">The first approach was using PyAutoGUI and OpenCV. OpenCV was used so the bot can “see” everything within the game while PyAutoGUI was used to control the game. A cascade classifier was trained using 150 images of the Player’s tank. After training, the classifier was able to recognize all the various types of tanks, but not differentiate between them. So the player tank and an enemy tank were the same thing in the eyes of the bot. In order to get around this, color masks were drawn around specific colors. The player’s tank is blue, so everything but blue was masked, the classifier recognized the tank and it was labeled appropriately. Inversely, blue was masked, and the classifier recognized all the enemy tanks. This approach worked successfully, but I ended up pivoting away from it in order to use a neural network.</span>
+                    <br>
+                    <span style="font-weight: 400;">The second approach was using the Stable-Baselines3 library. This library has lots of built in functions to train reinforcement learning models. A custom environment was created for the bot and a reward system was implemented. The rewards system was solely focused on eliminating enemy tanks, as time alive would just encourage the bot to stay alive, and not actively eliminate tanks. Using OpenCV again, the matchTemplate() function was used to recognize the various numbers in the specific score font. Simple image to text couldn’t be used since it was not trained on that specific font and would output erratic numbers.&nbsp;&nbsp;</span></b>
+                  <span style="font-weight: 400;"><b>
+                      <span style="font-weight: 400;">After successfully im</span>
+                      <span style="font-weight: 400;">plementing the environment and reward function, the bot would play the game unsuccessfully. After training f</span>
+                      <span style="font-weight: 400;">or ~20000 time steps, the bot progressed to the second level but not consistently. More training has to be done.</span></b>
+                  </span>
+                </p>
+                <img class="u-image u-image-default u-image-1" src="images/image5.png" alt="" data-image-width="800" data-image-height="460">
+                <h2 class="u-align-center u-text u-text-default u-text-3">Magstripe Card Swiper - Summer 2023</h2>
+                <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-80b9">
+                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+                    <li data-u-target="#carousel-80b9" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-80b9" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-80b9" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-80b9" data-u-slide-to="3" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-80b9" data-u-slide-to="4" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-80b9" data-u-slide-to="5" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-80b9" data-u-slide-to="6" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-80b9" data-u-slide-to="7" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                  </ol>
+                  <div class="u-carousel-inner u-gallery-inner" role="listbox">
+                    <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1" data-image-width="4032" data-image-height="3024">
+                      <div class="u-back-slide" data-image-width="606" data-image-height="536">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/mainMenu.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2" data-image-width="606" data-image-height="537">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/error.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-3" data-image-width="606" data-image-height="537">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/signedIn.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-3">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-4" data-image-width="606" data-image-height="537">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/signedOut.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-4">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-5" data-image-width="757" data-image-height="670">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/newUser.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-5">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-6" data-image-width="606" data-image-height="536">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/manual.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-6">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-7" data-image-width="606" data-image-height="537">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/signIn.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-7">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-8" data-image-width="606" data-image-height="537">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/signOut.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-8">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                  </div>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-80b9" role="button" data-u-slide="prev">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                    </span>
+                    <span class="sr-only">
+                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                    </span>
+                  </a>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-80b9" role="button" data-u-slide="next">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                    </span>
+                    <span class="sr-only">
+                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                    </span>
+                  </a>
+                </div>
+                <p class="u-align-center u-text u-text-4">This is a fully functioning magstripe ID card reading system. It uses Python and Excel sheets to sign in and out students when they swipe their card. The GUI was made using Python's Tkinter library.<br>
+                  <br>The program's main feature is to sign in and out, capturing the date and time at which it was done, but also includes many more features. Since it is tailored to the inVenTs Studio at Virginia Tech, signing in will bring up user data such as what tools they are currently trained on. It also features a button in which it will sign out all the students at closing time. New users are asked to fill in information to be added to the existing database.<br>
+                  <br>The OpenPyxl library and Pandas were used in conjunction to work with spreadsheets, pulling and modifying data as necessary. Spreadsheets were used to easily export and handle data for statistics purposes.<br>
+                  <br>The repo for this project can be found <a href="https://github.com/andrewbviola/cardSwiper" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">here</a>.
+                </p>
+                <h2 class="u-align-center u-text u-text-default u-text-5">CNC Sand Coffee Table - Summer 2022</h2>
+                <p class="u-align-center u-text u-text-6">Inspired by the <a href="https://sisyphus-industries.com/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" target="_blank">Sisyphus Sand Table</a> and the <a href="https://docs.v1engineering.com/zenxy/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">ZenXY</a>, this sand table was created using an old glass table top and spare wood.&nbsp; 3D printing software, Klipper, was flashed to an Arduino Uno, and is able to be controlled through a Raspberry Pi.&nbsp; Images in the sand can be generated through <a href="https://sandify.org" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4" target="_blank">sandify.org</a>, which users can hand create various line works, similar to vector drawing programs.&nbsp; To control the LEDs in the table, WLED is used for network control and Home Assistant integration.<br>
                   <br>In order to match the curved glasstop, the corners were measured and 3D printed to get the exact curve.&nbsp; The wood covering below the glass was lasercut to exact size.&nbsp; The legs and sidings were all hand cut with a jigsaw.&nbsp; Afterwards it was painted accordingly.<br>
                   <br>The sand table pictured is revision two.&nbsp; The first version used linear rails and a sub optimal belt path which caused it to misalign itself after drawing pictures in the sand.
                 </p>
-                <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-a3c6">
-                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+                <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-2" data-interval="5000" data-u-ride="carousel" id="carousel-a3c6">
+                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-2">
                     <li data-u-target="#carousel-a3c6" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
                     <li data-u-target="#carousel-a3c6" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
                     <li data-u-target="#carousel-a3c6" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
@@ -92,121 +262,9 @@
                     <li data-u-target="#carousel-a3c6" data-u-slide-to="12" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
                   </ol>
                   <div class="u-carousel-inner u-gallery-inner" role="listbox">
-                    <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1" data-image-width="1920" data-image-height="1440">
-                      <div class="u-back-slide u-back-slide-1">
+                    <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-9" data-image-width="1920" data-image-height="1440">
+                      <div class="u-back-slide u-back-slide-9">
                         <img class="u-back-image u-expanded" src="images/68091199322__822BD74D-E8F6-4C44-A264-D2D3ACAB0AB1.jpeg">
-                      </div>
-                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
-                        <h3 class="u-gallery-heading"></h3>
-                        <p class="u-gallery-text"></p>
-                      </div>
-                      <style data-mode="XL" data-visited="true"></style>
-                      <style data-mode="LG" data-visited="true"></style>
-                      <style data-mode="MD" data-visited="true"></style>
-                      <style data-mode="SM" data-visited="true"></style>
-                      <style data-mode="XS" data-visited="true"></style>
-                    </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2" data-image-width="4032" data-image-height="3024">
-                      <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/68089602867__5EDA8251-967F-4E72-BE1A-A142A934B7C3.jpeg">
-                      </div>
-                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
-                        <h3 class="u-gallery-heading"></h3>
-                        <p class="u-gallery-text"></p>
-                      </div>
-                      <style data-mode="XL" data-visited="true"></style>
-                      <style data-mode="LG" data-visited="true"></style>
-                      <style data-mode="MD" data-visited="true"></style>
-                      <style data-mode="SM" data-visited="true"></style>
-                      <style data-mode="XS" data-visited="true"></style>
-                    </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-3" data-image-width="4032" data-image-height="3024">
-                      <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/IMG_4818.jpeg">
-                      </div>
-                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-3">
-                        <h3 class="u-gallery-heading"></h3>
-                        <p class="u-gallery-text"></p>
-                      </div>
-                      <style data-mode="XL" data-visited="true"></style>
-                      <style data-mode="LG" data-visited="true"></style>
-                      <style data-mode="MD" data-visited="true"></style>
-                      <style data-mode="SM" data-visited="true"></style>
-                      <style data-mode="XS" data-visited="true"></style>
-                    </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-4" data-image-width="4032" data-image-height="3024">
-                      <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/67978183881__3D803E2C-3586-4823-8DF6-A2805799581D.jpeg">
-                      </div>
-                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-4">
-                        <h3 class="u-gallery-heading"></h3>
-                        <p class="u-gallery-text"></p>
-                      </div>
-                      <style data-mode="XL" data-visited="true"></style>
-                      <style data-mode="LG" data-visited="true"></style>
-                      <style data-mode="MD" data-visited="true"></style>
-                      <style data-mode="SM" data-visited="true"></style>
-                      <style data-mode="XS" data-visited="true"></style>
-                    </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-5" data-image-width="4032" data-image-height="3024">
-                      <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/67978076729__FF2C5589-97B2-4951-88F9-9CDDEAFC238B.jpeg">
-                      </div>
-                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-5">
-                        <h3 class="u-gallery-heading"></h3>
-                        <p class="u-gallery-text"></p>
-                      </div>
-                      <style data-mode="XL" data-visited="true"></style>
-                      <style data-mode="LG" data-visited="true"></style>
-                      <style data-mode="MD" data-visited="true"></style>
-                      <style data-mode="SM" data-visited="true"></style>
-                      <style data-mode="XS" data-visited="true"></style>
-                    </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-6" data-image-width="4032" data-image-height="3024">
-                      <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/IMG_4824.jpeg">
-                      </div>
-                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-6">
-                        <h3 class="u-gallery-heading"></h3>
-                        <p class="u-gallery-text"></p>
-                      </div>
-                      <style data-mode="XL" data-visited="true"></style>
-                      <style data-mode="LG" data-visited="true"></style>
-                      <style data-mode="MD" data-visited="true"></style>
-                      <style data-mode="SM" data-visited="true"></style>
-                      <style data-mode="XS" data-visited="true"></style>
-                    </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-7" data-image-width="4032" data-image-height="3024">
-                      <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/67994530718__199B5F11-B9AC-43F3-9FF0-5E615C4F2CBE.jpeg">
-                      </div>
-                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-7">
-                        <h3 class="u-gallery-heading"></h3>
-                        <p class="u-gallery-text"></p>
-                      </div>
-                      <style data-mode="XL" data-visited="true"></style>
-                      <style data-mode="LG" data-visited="true"></style>
-                      <style data-mode="MD" data-visited="true"></style>
-                      <style data-mode="SM" data-visited="true"></style>
-                      <style data-mode="XS" data-visited="true"></style>
-                    </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-8" data-image-width="4032" data-image-height="3024">
-                      <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/67975714266__708AF8E3-8D86-4008-9552-C4CCFA65D725.jpeg">
-                      </div>
-                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-8">
-                        <h3 class="u-gallery-heading"></h3>
-                        <p class="u-gallery-text"></p>
-                      </div>
-                      <style data-mode="XL" data-visited="true"></style>
-                      <style data-mode="LG" data-visited="true"></style>
-                      <style data-mode="MD" data-visited="true"></style>
-                      <style data-mode="SM" data-visited="true"></style>
-                      <style data-mode="XS" data-visited="true"></style>
-                    </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-9" data-image-width="4032" data-image-height="3024">
-                      <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/68004287404__8AC5DD36-F196-4B63-AAE8-29CF053E2D07.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-9">
                         <h3 class="u-gallery-heading"></h3>
@@ -220,7 +278,7 @@
                     </div>
                     <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-10" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/68004721830__F5E74CC1-6227-455A-AC51-59D52B666781.jpeg">
+                        <img class="u-back-image u-expanded" src="images/68089602867__5EDA8251-967F-4E72-BE1A-A142A934B7C3.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-10">
                         <h3 class="u-gallery-heading"></h3>
@@ -234,7 +292,7 @@
                     </div>
                     <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-11" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/68013523814__25E4A9CE-ECC8-45D5-AF45-A3D15A68F4DD.jpeg">
+                        <img class="u-back-image u-expanded" src="images/IMG_4818.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-11">
                         <h3 class="u-gallery-heading"></h3>
@@ -248,7 +306,7 @@
                     </div>
                     <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-12" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/68065669434__C6E08BE5-AACB-4415-9A3E-C564BF217B90.jpeg">
+                        <img class="u-back-image u-expanded" src="images/67978183881__3D803E2C-3586-4823-8DF6-A2805799581D.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-12">
                         <h3 class="u-gallery-heading"></h3>
@@ -262,7 +320,7 @@
                     </div>
                     <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-13" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/68005102165__B98307AA-64FA-413B-ABBB-50FC2A4CC140.jpeg">
+                        <img class="u-back-image u-expanded" src="images/67978076729__FF2C5589-97B2-4951-88F9-9CDDEAFC238B.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-13">
                         <h3 class="u-gallery-heading"></h3>
@@ -274,49 +332,9 @@
                       <style data-mode="SM" data-visited="true"></style>
                       <style data-mode="XS" data-visited="true"></style>
                     </div>
-                  </div>
-                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-a3c6" role="button" data-u-slide="prev">
-                    <span aria-hidden="true">
-                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-                    </span>
-                    <span class="sr-only">
-                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-                    </span>
-                  </a>
-                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-a3c6" role="button" data-u-slide="next">
-                    <span aria-hidden="true">
-                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-                    </span>
-                    <span class="sr-only">
-                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-                    </span>
-                  </a>
-                </div>
-                <h2 class="u-align-center u-text u-text-default u-text-3">Laser Engraved LED Picture Frame - Fall 2022&nbsp;</h2>
-                <p class="u-align-center u-text u-text-4">Originally starting as simple laser engraved wooden posters, it evolved to become a picture frame.&nbsp; The original artwork is hand traced in Inkscape in order to get a vectorized image of the poster.&nbsp; That image is laser engraved onto an 11" x 11" piece of wood.&nbsp; The image is then mirrored and laser engraved again onto an 11" x 11" piece of acrylic.&nbsp; The acrylic is mirrored so when it is turned around and placed on top of the wood, you cannot feel the engraved lines.<br>
-                  <br>The width of the wood and acrylic were measured and a frame was 3D modeled in Fusion 360.&nbsp; The frame is printed in four pieces along with four corners, all printed upright to avoid overhangs.&nbsp; An LED strip is strung through the frame and dupont connectors are crimped to the LED strip in order for it to be easily rearranged for a college dorm room.&nbsp; A custom PCB was CNC'd out of a single layer copper FR4 board.&nbsp; This was done to make wiring neater and as a proof of concept.<br>
-                  <br>With the LEDs off, the wood engraving is shown.&nbsp; But with the LEDs on, the acrylic engraving is lit, and shows off the detailed linework that was engraved.
-                </p>
-                <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-2" data-interval="5000" data-u-ride="carousel" id="carousel-62d9">
-                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-2">
-                    <li data-u-target="#carousel-62d9" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                    <li data-u-target="#carousel-62d9" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                    <li data-u-target="#carousel-62d9" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                    <li data-u-target="#carousel-62d9" data-u-slide-to="3" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                    <li data-u-target="#carousel-62d9" data-u-slide-to="4" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                  </ol>
-                  <div class="u-carousel-inner u-gallery-inner" role="listbox">
-                    <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-14" data-image-width="4032" data-image-height="3024">
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-14" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/69154524206__0DE95D7E-967F-43D0-AE7D-AA542A84B416.jpeg">
+                        <img class="u-back-image u-expanded" src="images/IMG_4824.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-14">
                         <h3 class="u-gallery-heading"></h3>
@@ -330,7 +348,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     </div>
                     <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-15" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/69154523258__87702E7E-F0A2-436B-B7CA-5628DEF9AF8B.jpeg">
+                        <img class="u-back-image u-expanded" src="images/67994530718__199B5F11-B9AC-43F3-9FF0-5E615C4F2CBE.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-15">
                         <h3 class="u-gallery-heading"></h3>
@@ -344,7 +362,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     </div>
                     <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-16" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/IMG_5405.jpeg">
+                        <img class="u-back-image u-expanded" src="images/67975714266__708AF8E3-8D86-4008-9552-C4CCFA65D725.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-16">
                         <h3 class="u-gallery-heading"></h3>
@@ -358,7 +376,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     </div>
                     <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-17" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/IMG_5461.jpeg">
+                        <img class="u-back-image u-expanded" src="images/68004287404__8AC5DD36-F196-4B63-AAE8-29CF053E2D07.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-17">
                         <h3 class="u-gallery-heading"></h3>
@@ -372,7 +390,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     </div>
                     <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-18" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded" src="images/IMG_5460.jpeg">
+                        <img class="u-back-image u-expanded" src="images/68004721830__F5E74CC1-6227-455A-AC51-59D52B666781.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-18">
                         <h3 class="u-gallery-heading"></h3>
@@ -384,49 +402,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       <style data-mode="SM" data-visited="true"></style>
                       <style data-mode="XS" data-visited="true"></style>
                     </div>
-                  </div>
-                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-3" href="#carousel-62d9" role="button" data-u-slide="prev">
-                    <span aria-hidden="true">
-                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-                    </span>
-                    <span class="sr-only">
-                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-                    </span>
-                  </a>
-                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-4" href="#carousel-62d9" role="button" data-u-slide="next">
-                    <span aria-hidden="true">
-                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-                    </span>
-                    <span class="sr-only">
-                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-                    </span>
-                  </a>
-                </div>
-                <h2 class="u-align-center u-text u-text-default u-text-5">Student Engineering Council Funding Application - Spring 2022</h2>
-                <img class="u-image u-image-default u-image-1" src="images/IMG_4250.jpeg" alt="" data-image-width="4032" data-image-height="3024">
-                <p class="u-align-center u-text u-text-6">After experiencing a deficiency in the 3D printing in our local makerspace at Virginia Tech, I wrote a <a href="files/inVenTsDesignStudio3DPrintingProposal.pdf" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-4">proposal</a> for funding for improvement in the space.&nbsp; A 15 page document outlined the need for new 3D printers and how to optimize the queue to be faster.&nbsp; After presenting this document to the department heads, I was approved to present on behalf of Virginia Tech's CEED (Center for the Enhancement of Engineering Diversity) to receive funding for better equipment in our makerspace.&nbsp; The Student Engineering Council accepted the proposal and CEED was granted $3600 for enhancements.
-                </p>
-                <h2 class="u-align-center u-text u-text-default u-text-7">3D Printed Iron Man Helmet - Spring 2021</h2>
-                <div class="u-carousel u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-3" data-interval="5000" data-u-ride="carousel" id="carousel-39c5">
-                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-3">
-                    <li data-u-target="#carousel-39c5" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                    <li data-u-target="#carousel-39c5" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                    <li data-u-target="#carousel-39c5" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                    <li data-u-target="#carousel-39c5" data-u-slide-to="3" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                    <li data-u-target="#carousel-39c5" data-u-slide-to="4" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                  </ol>
-                  <div class="u-carousel-inner u-gallery-inner" role="listbox">
-                    <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-19" data-image-width="3024" data-image-height="2361">
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-19" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded u-image-contain" src="images/IMG_18781.jpeg">
+                        <img class="u-back-image u-expanded" src="images/68013523814__25E4A9CE-ECC8-45D5-AF45-A3D15A68F4DD.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-19">
                         <h3 class="u-gallery-heading"></h3>
@@ -438,9 +416,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       <style data-mode="SM" data-visited="true"></style>
                       <style data-mode="XS" data-visited="true"></style>
                     </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-20" data-image-width="1920" data-image-height="1440">
-                      <div class="u-back-slide u-back-slide-20" data-image-width="3024" data-image-height="2223">
-                        <img src="images/IMG_18801.jpeg" alt="" data-image-width="2000" data-image-height="1333" class="u-back-image u-expanded">
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-20" data-image-width="4032" data-image-height="3024">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded" src="images/68065669434__C6E08BE5-AACB-4415-9A3E-C564BF217B90.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-20">
                         <h3 class="u-gallery-heading"></h3>
@@ -452,9 +430,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       <style data-mode="SM" data-visited="true"></style>
                       <style data-mode="XS" data-visited="true"></style>
                     </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-21" data-image-width="3024" data-image-height="2694">
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-21" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded u-image-contain" src="images/IMG_16061.jpeg">
+                        <img class="u-back-image u-expanded" src="images/68005102165__B98307AA-64FA-413B-ABBB-50FC2A4CC140.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-21">
                         <h3 class="u-gallery-heading"></h3>
@@ -466,9 +444,49 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       <style data-mode="SM" data-visited="true"></style>
                       <style data-mode="XS" data-visited="true"></style>
                     </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-22" data-image-width="3024" data-image-height="2764">
+                  </div>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-3" href="#carousel-a3c6" role="button" data-u-slide="prev">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                    </span>
+                    <span class="sr-only">
+                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                    </span>
+                  </a>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-4" href="#carousel-a3c6" role="button" data-u-slide="next">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                    </span>
+                    <span class="sr-only">
+                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                    </span>
+                  </a>
+                </div>
+                <h2 class="u-align-center u-text u-text-default u-text-7">Laser Engraved LED Picture Frame - Fall 2022&nbsp;</h2>
+                <p class="u-align-center u-text u-text-8">Originally starting as simple laser engraved wooden posters, it evolved to become a picture frame.&nbsp; The original artwork is hand traced in Inkscape in order to get a vectorized image of the poster.&nbsp; That image is laser engraved onto an 11" x 11" piece of wood.&nbsp; The image is then mirrored and laser engraved again onto an 11" x 11" piece of acrylic.&nbsp; The acrylic is mirrored so when it is turned around and placed on top of the wood, you cannot feel the engraved lines.<br>
+                  <br>The width of the wood and acrylic were measured and a frame was 3D modeled in Fusion 360.&nbsp; The frame is printed in four pieces along with four corners, all printed upright to avoid overhangs.&nbsp; An LED strip is strung through the frame and dupont connectors are crimped to the LED strip in order for it to be easily rearranged for a college dorm room.&nbsp; A custom PCB was CNC'd out of a single layer copper FR4 board.&nbsp; This was done to make wiring neater and as a proof of concept.<br>
+                  <br>With the LEDs off, the wood engraving is shown.&nbsp; But with the LEDs on, the acrylic engraving is lit, and shows off the detailed linework that was engraved.
+                </p>
+                <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-3" data-interval="5000" data-u-ride="carousel" id="carousel-62d9">
+                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-3">
+                    <li data-u-target="#carousel-62d9" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-62d9" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-62d9" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-62d9" data-u-slide-to="3" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-62d9" data-u-slide-to="4" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                  </ol>
+                  <div class="u-carousel-inner u-gallery-inner" role="listbox">
+                    <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-22" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded u-image-contain" src="images/IMG_17611.jpeg">
+                        <img class="u-back-image u-expanded" src="images/69154524206__0DE95D7E-967F-43D0-AE7D-AA542A84B416.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-22">
                         <h3 class="u-gallery-heading"></h3>
@@ -480,9 +498,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       <style data-mode="SM" data-visited="true"></style>
                       <style data-mode="XS" data-visited="true"></style>
                     </div>
-                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-23" data-image-width="3024" data-image-height="2395">
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-23" data-image-width="4032" data-image-height="3024">
                       <div class="u-back-slide">
-                        <img class="u-back-image u-expanded u-image-contain" src="images/IMG_17621.jpeg">
+                        <img class="u-back-image u-expanded" src="images/69154523258__87702E7E-F0A2-436B-B7CA-5628DEF9AF8B.jpeg">
                       </div>
                       <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-23">
                         <h3 class="u-gallery-heading"></h3>
@@ -494,8 +512,50 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       <style data-mode="SM" data-visited="true"></style>
                       <style data-mode="XS" data-visited="true"></style>
                     </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-24" data-image-width="4032" data-image-height="3024">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded" src="images/IMG_5405.jpeg">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-24">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-25" data-image-width="4032" data-image-height="3024">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded" src="images/IMG_5461.jpeg">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-25">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-26" data-image-width="4032" data-image-height="3024">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded" src="images/IMG_5460.jpeg">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-26">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
                   </div>
-                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-5" href="#carousel-39c5" role="button" data-u-slide="prev">
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-5" href="#carousel-62d9" role="button" data-u-slide="prev">
                     <span aria-hidden="true">
                       <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
 c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
@@ -507,7 +567,7 @@ c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.3
 c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
                     </span>
                   </a>
-                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-6" href="#carousel-39c5" role="button" data-u-slide="next">
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-6" href="#carousel-62d9" role="button" data-u-slide="next">
                     <span aria-hidden="true">
                       <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
@@ -520,45 +580,251 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     </span>
                   </a>
                 </div>
-                <p class="u-align-center u-text u-text-8">Using four servos and an Arduino Nano, this 3D printed Iron Man helmet is able to move up and down while also turning the lights on and off.<br>
+                <h2 class="u-align-center u-text u-text-default u-text-9">Student Engineering Council Funding Application - Spring 2022</h2>
+                <img class="u-image u-image-default u-image-2" src="images/IMG_4250.jpeg" alt="" data-image-width="4032" data-image-height="3024">
+                <p class="u-align-center u-text u-text-10">After experiencing a deficiency in the 3D printing in our local makerspace at Virginia Tech, I wrote a <a href="files/inVenTsDesignStudio3DPrintingProposal.pdf" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-5">proposal</a> for funding for improvement in the space.&nbsp; A 15 page document outlined the need for new 3D printers and how to optimize the queue to be faster.&nbsp; After presenting this document to the department heads, I was approved to present on behalf of Virginia Tech's CEED (Center for the Enhancement of Engineering Diversity) to receive funding for better equipment in our makerspace.&nbsp; The Student Engineering Council accepted the proposal and CEED was granted $3600 for enhancements.
+                </p>
+                <h2 class="u-align-center u-text u-text-default u-text-11">3D Printed Iron Man Helmet - Spring 2021</h2>
+                <div class="u-carousel u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-4" data-interval="5000" data-u-ride="carousel" id="carousel-39c5">
+                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-4">
+                    <li data-u-target="#carousel-39c5" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-39c5" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-39c5" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-39c5" data-u-slide-to="3" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-39c5" data-u-slide-to="4" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                  </ol>
+                  <div class="u-carousel-inner u-gallery-inner" role="listbox">
+                    <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-27" data-image-width="3024" data-image-height="2361">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/IMG_18781.jpeg">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-27">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-28" data-image-width="1920" data-image-height="1440">
+                      <div class="u-back-slide u-back-slide-28" data-image-width="3024" data-image-height="2223">
+                        <img src="images/IMG_18801.jpeg" alt="" data-image-width="2000" data-image-height="1333" class="u-back-image u-expanded">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-28">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-29" data-image-width="3024" data-image-height="2694">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/IMG_16061.jpeg">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-29">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-30" data-image-width="3024" data-image-height="2764">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/IMG_17611.jpeg">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-30">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-31" data-image-width="3024" data-image-height="2395">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/IMG_17621.jpeg">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-31">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL" data-visited="true"></style>
+                      <style data-mode="LG" data-visited="true"></style>
+                      <style data-mode="MD" data-visited="true"></style>
+                      <style data-mode="SM" data-visited="true"></style>
+                      <style data-mode="XS" data-visited="true"></style>
+                    </div>
+                  </div>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-7" href="#carousel-39c5" role="button" data-u-slide="prev">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                    </span>
+                    <span class="sr-only">
+                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                    </span>
+                  </a>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-8" href="#carousel-39c5" role="button" data-u-slide="next">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                    </span>
+                    <span class="sr-only">
+                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                    </span>
+                  </a>
+                </div>
+                <p class="u-align-center u-text u-text-12">Using four servos and an Arduino Nano, this 3D printed Iron Man helmet is able to move up and down while also turning the lights on and off.<br>
                   <br>The LED eyes are cut to size and were ordered from Aliexpress as cosplay eyes.&nbsp; They can be dimmed with a simple potentiometer.&nbsp; The Arduino Nano was powered off of 3 AA batteries and with a press of the button located on the helmet's ear, allowed the user to open and close the front.<br>
                   <br>The program controlling everything was written in Arudino C.
                 </p>
-                <h2 class="u-align-center u-text u-text-default u-text-9">Electric Bicycle Conversion - Spring 2019</h2>
+                <h2 class="u-align-center u-text u-text-default u-text-13">Electric Bicycle Conversion - Spring 2019</h2>
                 <div class="u-video u-video-contain u-video-1">
                   <div class="embed-responsive embed-responsive-1">
                     <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="https://www.youtube.com/embed/zIjX4rlOuFY?mute=1&amp;showinfo=0&amp;controls=0&amp;start=0" frameborder="0" allowfullscreen=""></iframe>
                   </div>
                 </div>
-                <p class="u-align-center u-text u-text-10">Using an off the shelf kit, an old standard bicycle was converted into an electric bike in my garage.&nbsp; This build log details the entire conversion and my first couple rides with it.&nbsp; I went on to convert additional bicycles for family and friends.</p>
+                <p class="u-align-center u-text u-text-14">Using an off the shelf kit, an old standard bicycle was converted into an electric bike in my garage.&nbsp; This build log details the entire conversion and my first couple rides with it.&nbsp; I went on to convert additional bicycles for family and friends.</p>
               </div>
             </div>
             <div class="u-container-style u-tab-pane u-tab-pane-2" id="tab-081f" role="tabpanel" aria-labelledby="link-tab-081f">
               <div class="u-container-layout u-container-layout-2">
-                <h2 class="u-align-center u-text u-text-default u-text-11">Simple Computer Project - Fall 2022</h2>
-                <img class="u-image u-image-contain u-image-default u-image-2" src="images/image.png" alt="" data-image-width="600" data-image-height="436">
-                <p class="u-align-center u-text u-text-12">Over the course of my Sophomore Fall semester, my Digital Systems class gave us a DE10-Lite development board to develop and test our systems on.&nbsp; The class consisted of learning how to use Verilog in order to create parts of a simple computer.&nbsp; It had us developing arithmetic, logic, and shift units using just logic gates, rather than using bitwise operators. In addition to creating these compute units, we developed a register and bus system to move the data around within our simple computer.&nbsp; This class was foundational and each system tended to build off of previous work.&nbsp; In addition to learning how to create these systems, we were taught to minimize our transistor count and to create systems efficiently.<br>
+                <h2 class="u-align-center u-text u-text-default u-text-15">Infrared Radio Teletype Project - Spring 2023</h2>
+                <p class="u-align-center u-text u-text-16">During my Sophomore Spring semester, I took Virginia Tech's ECE Sophomore design class. The project I chose to do was this Infrared Radio Teletype project. The basic idea of the project was to send and receive messages only using an IR LED, an IR photodiode, and two Arduinos. I was able to achieve sending and receiving a&nbsp; message over 30 ft.<br>
+                  <br>Using Arduino C, I programmed a method of decoding a string into 8-bit binary (ASCII representation) with a start and stop bit for each letter. This program would take a string, break it down into letters and then each letter would get broken down into 10 bits. The IR LED would then be turned on and off at specific frequencies depending if it was a 1 (2125 Hz) or a 0 (2295 Hz) (These frequencies were project spec).<br>
+                  <br>On the receiving end, a transimpedance amplifier was used to convert the photodiode's current into a readable voltage. This voltage was then passed through a series of bandpass filters to reduce noise and to single out either a 1 or 0. The receiving Arduino used a digital comparator to compare whether the receiving signal was noise or the real deal. If it was the real deal, the frequency was measured appropriately using the input capture registers and assigned to a 1 or 0. The program then worked nearly identical to the sending side, but in reverse.<br>
+                  <br>To go above and beyond, I built a T-9 dialing device that would write a message on an OLED screen and send the message. I ended with an A in the class and a report on this project is available on request.
+                </p>
+                <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-5" data-interval="5000" data-u-ride="carousel" id="carousel-26ee">
+                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-5">
+                    <li data-u-target="#carousel-26ee" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-26ee" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-26ee" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-26ee" data-u-slide-to="3" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                  </ol>
+                  <div class="u-carousel-inner u-gallery-inner" role="listbox">
+                    <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-32" data-image-width="960" data-image-height="930">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/Screenshot2023-09-05at4.42.51PM.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-32">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-33" data-image-width="606" data-image-height="537">
+                      <div class="u-back-slide" data-image-width="706" data-image-height="518">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/Screenshot2023-09-05at4.43.01PM.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-33">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-34" data-image-width="1026" data-image-height="482">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/Screenshot2023-09-05at4.43.21PM.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-34">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                    <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-35" data-image-width="1068" data-image-height="566">
+                      <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="images/Screenshot2023-09-05at4.43.50PM.png">
+                      </div>
+                      <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-35">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                      </div>
+                      <style data-mode="XL"></style>
+                      <style data-mode="LG"></style>
+                      <style data-mode="MD"></style>
+                      <style data-mode="SM"></style>
+                      <style data-mode="XS"></style>
+                    </div>
+                  </div>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-9" href="#carousel-26ee" role="button" data-u-slide="prev">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                    </span>
+                    <span class="sr-only">
+                      <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                    </span>
+                  </a>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-10" href="#carousel-26ee" role="button" data-u-slide="next">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                    </span>
+                    <span class="sr-only">
+                      <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                    </span>
+                  </a>
+                </div>
+                <h2 class="u-align-center u-text u-text-default u-text-17">Simple Computer Project - Fall 2022</h2>
+                <p class="u-align-center u-text u-text-18">Over the course of my Sophomore Fall semester, my Digital Systems class gave us a DE10-Lite development board to develop and test our systems on.&nbsp; The class consisted of learning how to use Verilog in order to create parts of a simple computer.&nbsp; It had us developing arithmetic, logic, and shift units using just logic gates, rather than using bitwise operators. In addition to creating these compute units, we developed a register and bus system to move the data around within our simple computer.&nbsp; This class was foundational and each system tended to build off of previous work.&nbsp; In addition to learning how to create these systems, we were taught to minimize our transistor count and to create systems efficiently.<br>
                   <br>By the end of the semester, we brought all our systems together into a simple computer.&nbsp; It took some tinkering to have all the systems work well with each other, but I was successful, earning an A in the class.&nbsp; A report on the function unit, instruction decoder, and register system is available upon request.
                 </p>
-                <h2 class="u-align-center u-text u-text-default u-text-13">Drone Project - Fall 2022</h2>
-                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3" src="images/image1.png" alt="" data-image-width="1000" data-image-height="1000">
-                <p class="u-align-center u-text u-text-14">In my Computational Engineering class during my Sophomore Fall semester, students were taught the fundamentals of C++.&nbsp; At the end of the semester, we were tasked with programming a DJI Tello Drone to do a student chosen flight path for three to five minutes.<br>
+                <img class="u-image u-image-contain u-image-default u-image-3" src="images/image.png" alt="" data-image-width="600" data-image-height="436">
+                <h2 class="u-align-center u-text u-text-default u-text-19">Drone Project - Fall 2022</h2>
+                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4" src="images/image1.png" alt="" data-image-width="1000" data-image-height="1000">
+                <p class="u-align-center u-text u-text-20">In my Computational Engineering class during my Sophomore Fall semester, students were taught the fundamentals of C++.&nbsp; At the end of the semester, we were tasked with programming a DJI Tello Drone to do a student chosen flight path for three to five minutes.<br>
                   <br>I programmed the drone to take off, write out the words "I LIKE ECE" in mid air, and then land.&nbsp; The project required us to develop various classes and functions in order for the drone to work.&nbsp; Similar to the simple computer project, this project built off of systems previously taught in class.&nbsp; By the time the project came, it focused on putting the systems together to work with each other.&nbsp; At the end of the project, I was successful, earning an A in the class.&nbsp; A report based on this project is available upon request.<br>
                 </p>
               </div>
             </div>
             <div class="u-container-style u-tab-pane" id="link-tab-6219" role="tabpanel" aria-labelledby="tab-6219">
               <div class="u-container-layout u-container-layout-3">
-                <h2 class="u-align-center u-text u-text-default u-text-15">Voron 2.4 FFF 3D Printer - Fall 2022&nbsp;</h2>
-                <p class="u-align-center u-text u-text-16">This <a href="https://vorondesign.com/voron2.4" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" target="_blank">Voron 2.4</a> (serial 4790) was self-sourced and built over the course of a couple of weeks.&nbsp; All the 3D printed parts were printed on a Prusa MK3S+ and the wiring was hand crimped to exact sizing as needed.&nbsp; It has the following mods:&nbsp; Klicky, Klipperscreen, chamber lights, chamber thermistor, THE FILTER, and a CAN Bus toolhead.<br>
+                <h2 class="u-align-center u-text u-text-default u-text-21">Voron 2.4 FFF 3D Printer - Fall 2022&nbsp;</h2>
+                <p class="u-align-center u-text u-text-22">This <a href="https://vorondesign.com/voron2.4" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6" target="_blank">Voron 2.4</a> (serial 4790) was self-sourced and built over the course of a couple of weeks.&nbsp; All the 3D printed parts were printed on a Prusa MK3S+ and the wiring was hand crimped to exact sizing as needed.&nbsp; It has the following mods:&nbsp; Klicky, Klipperscreen, chamber lights, chamber thermistor, THE FILTER, and a CAN Bus toolhead.<br>
                   <br>I designed a filament sensor and ECAS fitting adapter for the toolhead, lacking in the original Stealthburner design.&nbsp; This filament sensor uses an Omron D2F switch that is pushed when filament is inserted and auto-loads filament similar to the Prusa MK3S+.<br>
-                  <br>The <a href="https://www.youtube.com/watch?v=mwpI7dCOgh0" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6" target="_blank">CAN Bus</a> toolhead is the SB2040 flashed with CanBoot and using a UTOC connected to the Raspberry Pi.&nbsp; The umbilical wire was heat shrinked and cut to size as needed.&nbsp; The strain relief is a piece of nylon filament holding up the umbilical wire.<br>
+                  <br>The <a href="https://www.youtube.com/watch?v=mwpI7dCOgh0" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7" target="_blank">CAN Bus</a> toolhead is the SB2040 flashed with CanBoot and using a UTOC connected to the Raspberry Pi.&nbsp; The umbilical wire was heat shrinked and cut to size as needed.&nbsp; The strain relief is a piece of nylon filament holding up the umbilical wire.<br>
                   <br>This printer acts as my workhorse printer and pumps out perfectly dimensioned parts as needed for projects.
                 </p>
-                <img class="u-image u-image-default u-image-4" src="images/Screenshot2023-01-08at12.41.36PM.png" alt="" data-image-width="1582" data-image-height="1678">
-                <h2 class="u-align-center u-text u-text-default u-text-17">Prusa MK3 -&gt; MK3S+ &amp; MMU2S - Summer 2022</h2>
-                <img class="u-image u-image-default u-image-5" src="images/image4.png" alt="" data-image-width="1024" data-image-height="769">
-                <p class="u-align-center u-text u-text-18">Originally a MK3, this 3D printer was my first printer.&nbsp; In the Summer of 2022, I upgraded it to a MK3S+ with a Phaetus Dragon hotend.&nbsp; The original orange parts were replaced with yellow ABS parts in order to sustain higher temperatures.&nbsp; Along with upgrading it to a MK3S+, a camera and Octoprint were added.&nbsp; This was done to add a locally hosted <a href="https://www.obico.io/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7" target="_blank">Obico</a> server to watch for 3D printing mishaps.<br>
+                <img class="u-image u-image-default u-image-5" src="images/Screenshot2023-01-08at12.41.36PM.png" alt="" data-image-width="1582" data-image-height="1678">
+                <h2 class="u-align-center u-text u-text-default u-text-23">Prusa MK3 -&gt; MK3S+ &amp; MMU2S - Summer 2022</h2>
+                <img class="u-image u-image-default u-image-6" src="images/image4.png" alt="" data-image-width="1024" data-image-height="769">
+                <p class="u-align-center u-text u-text-24">Originally a MK3, this 3D printer was my first printer.&nbsp; In the Summer of 2022, I upgraded it to a MK3S+ with a Phaetus Dragon hotend.&nbsp; The original orange parts were replaced with yellow ABS parts in order to sustain higher temperatures.&nbsp; Along with upgrading it to a MK3S+, a camera and Octoprint were added.&nbsp; This was done to add a locally hosted <a href="https://www.obico.io/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8" target="_blank">Obico</a> server to watch for 3D printing mishaps.<br>
                   <br>Along with upgrading to a MK3S+, the MMU2S upgrade was added.&nbsp; This brought multi material printing to this single toolhead printer and allowed for me to print in various colors and water soluble supports for easier cleanup.&nbsp; While difficult to use at first, it was eventually tinkered out to provide near perfect prints.
                 </p>
               </div>
